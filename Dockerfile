@@ -17,8 +17,5 @@ WORKDIR /app
 
 RUN pip install -r requirements.txt
 
-# Bundle app source
-COPY analytics/ .
-
 EXPOSE 5153
 CMD [ "python", "./app.py" ]
