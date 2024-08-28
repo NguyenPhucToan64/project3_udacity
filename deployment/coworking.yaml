@@ -30,27 +30,39 @@ spec:
     spec:
       containers:
       - name: coworking
-        image: 637423333373.dkr.ecr.us-east-1.amazonaws.com/coworking-analytics:v3
+        image: hello-world:linux
         imagePullPolicy: IfNotPresent
-        livenessProbe:
-          httpGet:
-            path: /health_check
-            port: 5153
-          initialDelaySeconds: 5
-          timeoutSeconds: 2
-        readinessProbe:
-          httpGet:
-            path: "/readiness_check"
-            port: 5153
-          initialDelaySeconds: 5
-          timeoutSeconds: 5
-        envFrom:
-        - configMapRef:
-            name: config-map-postgre-sql
+        # livenessProbe:
+        #   httpGet:
+        #     path: /health_check
+        #     port: 5153
+        #   initialDelaySeconds: 15
+        #   timeoutSeconds: 10
+        # readinessProbe:
+        #   httpGet:
+        #     path: "/readiness_check"
+        #     port: 5153
+        #   initialDelaySeconds: 15
+        #   timeoutSeconds: 10
+      #   envFrom:
+      #   - configMapRef:
+      #       name: config-map-postgre-sql
+      #   env:
+      #   - name: DB_PASSWORD
+      #     valueFrom:
+      #       secretKeyRef:
+      #         name: secret-db-password
+      #         key: DB_PASSWORD
+      # restartPolicy: Always
         env:
         - name: DB_PASSWORD
-          valueFrom:
-            secretKeyRef:
-              name: secret-db-password
-              key: DB_PASSWORD
+          value: "mypassword_toan"
+        - name: DB_USERNAME
+          value: "mypassword_toan"
+        - name: DB_HOST
+          value: "10.100.89.64"
+        - name: DB_PORT
+          value: "5432"
+        - name: DB_NAME
+          value: "mydatabase_toan"
       restartPolicy: Always

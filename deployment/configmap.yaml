@@ -4,8 +4,8 @@ metadata:
   name: config-map-postgre-sql
 data:
   DB_NAME: mydatabase_toan
-  DB_USER: myuser_toan
-  DB_HOST: postgresql-service
+  DB_USERNAME: myuser_toan
+  DB_HOST: "10.100.89.64"
   DB_PORT: "5432"
 ---
 apiVersion: "v1"
