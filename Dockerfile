@@ -13,12 +13,9 @@ RUN apt install build-essential libpq-dev -y
 RUN pip install --upgrade pip setuptools wheel
 
 # Install app dependencies
-COPY analytics/requirements.txt ./
+COPY analytics/ .
 
 RUN pip install -r requirements.txt
-
-# Bundle app source
-COPY analytics /app
 
 EXPOSE 5153
 CMD [ "python", "./app.py" ]
