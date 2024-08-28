@@ -1,4 +1,4 @@
-FROM python:3.9.19-slim
+FROM python:3.10-slim-buster
 
 
 # Update the local package index with the latest packages from the repositories
