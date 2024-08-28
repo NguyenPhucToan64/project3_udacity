@@ -21,4 +21,4 @@ RUN pip install -r requirements.txt
 COPY analytics /app
 
 EXPOSE 5153
-CMD [ "python", "app.py" ]
+CMD [ "python", "./app.py" ]
