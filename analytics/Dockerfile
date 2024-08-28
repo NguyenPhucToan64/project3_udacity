@@ -16,4 +16,5 @@ RUN pip install -r requirements.txt
 # ENV DB_PORT=5433
 # ENV DB_NAME=mydatabase_toan
 EXPOSE 5153
-ENTRYPOINT python app.py
+# ENTRYPOINT python app.py
+CMD ["python3","app.py"]
