@@ -10,7 +10,7 @@ RUN apt update -y
 RUN apt install build-essential libpq-dev -y
 
 # Update python modules to successfully build the required modules
-RUN pip install --upgrade pip setuptools wheel
+# RUN pip install --upgrade pip setuptools wheel
 
 # Install app dependencies
 COPY analytics/ .
