@@ -3,7 +3,6 @@ FROM python:3.10-slim
 RUN apt update -y
 
 RUN apt install build-essential libpq-dev -y
-RUN pip install --no-cache-dir --upgrade pip setuptools wheel
 
 COPY analytics/ ./app
 
