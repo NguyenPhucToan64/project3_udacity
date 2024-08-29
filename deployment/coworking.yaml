@@ -30,7 +30,7 @@ spec:
     spec:
       containers:
       - name: coworking
-        image: 637423333373.dkr.ecr.us-east-1.amazonaws.com/coworking-analytics:v15
+        image: 637423333373.dkr.ecr.us-east-1.amazonaws.com/coworking-analytics:v17
         imagePullPolicy: Always
         livenessProbe:
           httpGet:
@@ -58,9 +58,9 @@ spec:
         - name: DB_PASSWORD
           value: "mypassword_toan"
         - name: DB_USERNAME
-          value: "mypassword_toan"
+          value: "myuser_toan"
         - name: DB_HOST
-          value: postgresql-service
+          value: "postgresql-service"
         - name: DB_PORT
           value: "5432"
         - name: DB_NAME
