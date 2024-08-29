@@ -44,25 +44,25 @@ spec:
             port: 5153
           initialDelaySeconds: 5
           timeoutSeconds: 5
-      #   envFrom:
-      #   - configMapRef:
-      #       name: config-map-postgre-sql
-      #   env:
-      #   - name: DB_PASSWORD
-      #     valueFrom:
-      #       secretKeyRef:
-      #         name: secret-db-password
-      #         key: DB_PASSWORD
-      # restartPolicy: Always
+        envFrom:
+        - configMapRef:
+            name: config-map-postgre-sql
         env:
         - name: DB_PASSWORD
-          value: "mypassword_toan"
-        - name: DB_USERNAME
-          value: "myuser_toan"
-        - name: DB_HOST
-          value: "postgresql-service"
-        - name: DB_PORT
-          value: "5432"
-        - name: DB_NAME
-          value: "mydatabase_toan"
+          valueFrom:
+            secretKeyRef:
+              name: secret-db-password
+              key: DB_PASSWORD
       restartPolicy: Always
+      #   env:
+      #   - name: DB_PASSWORD
+      #     value: "mypassword_toan"
+      #   - name: DB_USERNAME
+      #     value: "myuser_toan"
+      #   - name: DB_HOST
+      #     value: "postgresql-service"
+      #   - name: DB_PORT
+      #     value: "5432"
+      #   - name: DB_NAME
+      #     value: "mydatabase_toan"
+      # restartPolicy: Always

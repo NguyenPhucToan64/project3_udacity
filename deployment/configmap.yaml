@@ -5,7 +5,7 @@ metadata:
 data:
   DB_NAME: mydatabase_toan
   DB_USERNAME: myuser_toan
-  DB_HOST: "10.100.89.64"
+  DB_HOST: postgresql-service
   DB_PORT: "5432"
 ---
 apiVersion: "v1"
