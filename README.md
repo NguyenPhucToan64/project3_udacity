@@ -26,6 +26,6 @@
 #### 7. Apply app by `coworking.yaml` in ```deployment``` folder.
 
 
-#Specify reasonable Memory and CPU allocation in the Kubernetes deployment configuration
-    Memory: 0.35G - 9%  . Total: 3.76GB(t3.medium)
-    CPU: 750m - 38% . Total: 2 core (t3.medium).
+# Specify reasonable Memory and CPU allocation in the Kubernetes deployment configuration
+    ## Memory: 0.35G - 9%  . Total: 3.76GB(t3.medium)
+    ## CPU: 750m - 38% . Total: 2 core (t3.medium).
